@@ -10,7 +10,7 @@
 #include <dt-bindings/zmk/keys.h>
 
 / {
-    #include <behaviors/battery_percentage_printer.dtsi>
+#include <behaviors/battery_percentage_printer.dtsi>
 
     combos {
         compatible = "zmk,combos";
@@ -62,7 +62,7 @@
 &kp LEFT_WIN  &kp N1  &kp N2  &kp N3        &kp N4            &kp N5                              &kp N6  &kp N7      &kp N8     &kp N9   &kp N0    &kp GRAVE
 &kp TAB       &kp Q   &kp W   &kp E         &kp R             &kp T                               &kp Y   &kp U       &kp I      &kp O    &kp P     &kp MINUS
 &kp CAPSLOCK  &kp A   &kp S   &kp D         &kp F             &kp G                               &kp H   &kp J       &kp K      &kp L    &kp SEMI  &kp SQT
-&kp LSHFT     &kp Z   &kp X   &kp C         &kp V             &kp B   &kp ESC      &kp ENTER      &kp N   &kp M       &kp COMMA  &kp DOT  &kp FSLH  &bl BL_OFF
+&kp LSHFT     &kp Z   &kp X   &kp C         &kp V             &kp B   &kp ESC      &kp ENTER      &kp N   &kp M       &kp COMMA  &kp DOT  &bapp     &bapp
                               &kp LEFT_ALT  &kp LEFT_CONTROL  &mo 1   &kp SPACE    &kp BACKSPACE  &mo 2   &kp DELETE  &kp RGUI
             >;
 
