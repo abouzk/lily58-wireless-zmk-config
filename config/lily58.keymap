@@ -4,7 +4,7 @@
  * SPDX-License-Identifier: MIT
  */
 
-#include <behaviors/battery_percentage_printer.dtsi>
+#include "zmk-behavior-battery-percentage-printer/dts/behaviors/battery_percentage_printer.dtsi"
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/backlight.h>
 #include <dt-bindings/zmk/bt.h>
