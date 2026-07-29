@@ -9,10 +9,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
-&gresc {
-    bindings = <&kp UNDERSCORE>, <&kp MINUS>;
-};
-
 / {
     combos {
         compatible = "zmk,combos";
@@ -136,7 +132,7 @@
             display-name = "Base";
             bindings = <
 &kp GRAVE     &kp N1  &kp N2  &kp N3  &kp N4     &kp N5                                               &kp N6      &kp N7           &kp N8     &kp N9   &kp N0               &kp EQUAL
-&kp TAB       &kp Q   &kp W   &kp E   &kp R      &kp T                                                &kp Y       &kp U            &kp I      &kp O    &kp P                &gresc
+&kp TAB       &kp Q   &kp W   &kp E   &kp R      &kp T                                                &kp Y       &kp U            &kp I      &kp O    &kp P                &kp MINUS
 &kp CAPSLOCK  &kp A   &kp S   &kp D   &kp F      &kp G                                                &kp H       &kp J            &kp K      &kp L    &kp SEMI             &kp SQT
 &kp LSHFT     &kp Z   &kp X   &kp C   &kp V      &kp B         &kp ESC                 &kp ENTER      &kp N       &kp M            &kp COMMA  &kp DOT  &mt BACKSLASH SLASH  &kp LEFT_WIN
                               &mo 1   &kp LCTRL  &kp LEFT_ALT  &mt LEFT_SHIFT SPACE    &kp BACKSPACE  &kp DELETE  &kp PRINTSCREEN  &mo 2
@@ -155,11 +151,11 @@
 
             display-name = "Raise";
             bindings = <
-&trans  &kp F1         &kp F2         &kp F3            &kp F4     &kp F5                       &kp F6          &kp F7             &kp F8           &kp F9      &kp F10               &kp F11
-&trans  &arrow         &scope         &not_equal        &lse       &gre                         &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END     &kp C_BRIGHTNESS_INC  &kp F12
-&trans  &git_status    &git_add       &git_commit       &git_push  &colcon                      &kp LEFT        &kp DOWN           &kp UP_ARROW     &kp RIGHT   &kp C_BRIGHTNESS_DEC  &trans
-&trans  &kp LC(LS(P))  &kp LS(LA(A))  &kp LS(LA(DOWN))  &kp LC(Z)  &kp LC(V)  &trans    &trans  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_PAUSE           &trans
-                                      &trans            &trans     &trans     &trans    &trans  &trans          &trans             &trans
+&trans  &kp F1       &kp F2         &kp F3         &kp F4                  &kp F5                           &kp F6          &kp F7             &kp F8           &kp F9      &kp F10               &kp F11
+&trans  &arrow       &scope         &not_equal     &lse                    &gre                             &kp HOME        &kp PAGE_DOWN      &kp PAGE_UP      &kp END     &kp C_BRIGHTNESS_INC  &kp F12
+&trans  &git_status  &git_add       &git_commit    &git_push               &colcon                          &kp LEFT        &kp DOWN           &kp UP_ARROW     &kp RIGHT   &kp C_BRIGHTNESS_DEC  &trans
+&trans  &source      &kp LS(LA(F))  &kp LS(LC(P))  &kp LS(LA(DOWN_ARROW))  &kp LS(LA(A))  &trans    &trans  &kp C_PREVIOUS  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_NEXT  &kp C_PAUSE           &trans
+                                    &trans         &trans                  &trans         &trans    &trans  &trans          &trans             &trans
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOL_UP C_VOL_DN>;
